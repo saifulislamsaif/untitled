@@ -1,0 +1,6 @@
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/bfs.dir
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/dfs.dir
+/home/cye/CLionProjects/untitled/cmake-build-debug/CMakeFiles/graphRepresent.dir
