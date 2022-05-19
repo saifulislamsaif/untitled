@@ -64,6 +64,68 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
+# Object build statements for EXECUTABLE target dfs_code
+
+
+#############################################
+# Order-only phony target for dfs_code
+
+build cmake_object_order_depends_target_dfs_code: phony || CMakeFiles/dfs_code.dir
+
+build CMakeFiles/dfs_code.dir/dfs_code.cpp.o: CXX_COMPILER__dfs_code_Debug /home/cye/CLionProjects/untitled/dfs_code.cpp || cmake_object_order_depends_target_dfs_code
+  DEP_FILE = CMakeFiles/dfs_code.dir/dfs_code.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/dfs_code.dir
+  OBJECT_FILE_DIR = CMakeFiles/dfs_code.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dfs_code
+
+
+#############################################
+# Link the executable dfs_code
+
+build dfs_code: CXX_EXECUTABLE_LINKER__dfs_code_Debug CMakeFiles/dfs_code.dir/dfs_code.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/dfs_code.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = dfs_code
+  TARGET_PDB = dfs_code.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target main
+
+
+#############################################
+# Order-only phony target for main
+
+build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
+
+build CMakeFiles/main.dir/main.cpp.o: CXX_COMPILER__main_Debug /home/cye/CLionProjects/untitled/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/main.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target main
+
+
+#############################################
+# Link the executable main
+
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = main
+  TARGET_PDB = main.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target untitled
 
 
@@ -198,7 +260,7 @@ build graphRepresent: CXX_EXECUTABLE_LINKER__graphRepresent_Debug CMakeFiles/gra
 #############################################
 # Folder: /home/cye/CLionProjects/untitled/cmake-build-debug
 
-build all: phony untitled bfs dfs graphRepresent
+build all: phony dfs_code main untitled bfs dfs graphRepresent
 
 # =============================================================================
 # Built-in targets

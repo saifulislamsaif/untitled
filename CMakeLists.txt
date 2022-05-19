@@ -7,3 +7,6 @@ add_executable(untitled main.cpp)
 add_executable(bfs bfs.cpp)
 add_executable(graphRepresent graphRepe.cpp)
 add_executable(dfs dfs.cpp)
+add_executable(main main.cpp)
+add_executable(dfs_code dfs_code.cpp)
+
