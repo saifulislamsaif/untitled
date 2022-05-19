@@ -7,15 +7,17 @@ bool vis[N];
 vector<vector<int>> cc;
 vector<int> current_cc;
 
-void dfs(int vertex) {
+bool dfs(int vertex, int par) {
 
     vis[vertex] = true;
-    current_cc.push_back(vertex);
+    bool isLoopExitss = false;
     for (int child: g[vertex]) {
-        if (vis[child]) continue;
-        dfs(child);
+        if (vis[child] && child == par) continue;
+        if(vis[child]) return true;
+       isLoopExitss |= dfs(child,vertex);
 
     }
+    return isLoopExitss;
 }
 
 int main() {
@@ -27,27 +29,22 @@ int main() {
         g[v1].push_back(v2);
         g[v2].push_back(v1);
     }
-
-    int ct = 0;
+    bool isLoopExits = false;
     for (int i = 1; i <= n ; ++i) {
         if(vis[i]) continue;
-        current_cc.clear();
-        dfs(i);
-        cc.push_back(current_cc);
-        ct++;
+      if(dfs(i,0)){
+          isLoopExits = true;
+          break;
+      }
     }
-    cout<<cc.size()<<endl;
-    for(auto c_cc: cc){
-        for(int vertex :c_cc){
-            cout << vertex << " ";
-        }
-        cout << endl;
-    }
+
+    cout<<isLoopExits<<endl;
 }
 
-//8 5
+//8 6
 //1 5
 //2 3
 //2 4
 //3 5
 //6 7
+//1 5
